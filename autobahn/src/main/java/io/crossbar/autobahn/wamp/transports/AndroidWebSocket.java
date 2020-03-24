@@ -164,7 +164,7 @@ public class AndroidWebSocket implements ITransport {
             case MessagePackSerializer.NAME:
                 return new MessagePackSerializer();
             default:
-                throw new IllegalArgumentException("Unsupported serializer.");
+                return new JSONSerializer();
         }
     }
 }
